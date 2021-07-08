@@ -1,0 +1,15 @@
+{
+  "name": "lambdapdfgeneration",
+  "version": "1.0.0",
+  "description": "A lambda function that will take html as a input and return pdf buffer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikhil Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-aws-lambda": "^10.0.0",
+    "puppeteer-core": "^10.1.0"
+  }
+}

@@ -37,10 +37,9 @@ exports.handler = async (event) => {
       await browser.close();
     }
   }
-  const body = { buffer: pdfBuffer };
   const response = {
     statusCode: 200,
-    body: JSON.stringify(body),
+    body: pdfBuffer.toString("base64"),
   };
   return response;
 };

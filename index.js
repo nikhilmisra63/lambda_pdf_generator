@@ -1,5 +1,5 @@
 const chromium = require("chrome-aws-lambda");
-module.exports.pdf = async (event) => {
+exports.handler = async (event) => {
   const { html } = event;
   let pdfBuffer;
   try {

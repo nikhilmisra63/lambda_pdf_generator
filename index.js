@@ -2,17 +2,17 @@ const chromium = require("chrome-aws-lambda");
 exports.handler = async (event) => {
   const { html } = event;
   let pdfBuffer;
+  let browser;
   try {
-    const browser = (browser = await chromium.puppeteer.launch({
+    browser = await chromium.puppeteer.launch({
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath,
       headless: chromium.headless,
-    }));
+    });
   } catch (error) {
     return error;
   }
-
   try {
     const page = await browser.newPage();
     await page.setContent(html);

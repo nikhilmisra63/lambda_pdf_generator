@@ -37,5 +37,10 @@ exports.handler = async (event) => {
       await browser.close();
     }
   }
-  return pdfBuffer;
+  const body = { buffer: pdfBuffer };
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify(body),
+  };
+  return response;
 };
